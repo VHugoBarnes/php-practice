@@ -29,4 +29,21 @@ $year--;
 // $year = 1 - $year;
 --$year;
 
+echo "<h1>$year</h1>";
+
+// Operadores de asignación
+$edad = 21;
+
+echo $edad . '<br/>';
+// Incremento
+echo ($edad+=5);
+// decremento
+echo ($edad-=5);
+// Multiplicacion
+echo ($edad*=5);
+// División
+echo ($edad/=5);
+// Modulo
+echo ($edad%=5);
+
 ?>
