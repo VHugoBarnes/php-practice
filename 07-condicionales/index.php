@@ -47,4 +47,29 @@ if($dia == 1) {
     echo 'Es fin de semana';
 }
 
+echo '<br/>';
+
+// Ejercicio 5. Operadores lógicos
+/**
+ * Operadores lógicos
+ * && AND
+ * || OR
+ * ! NOT
+ */
+$edad1 = 18;
+$edad2 = 64;
+$edad_oficial = 20;
+
+if($edad_oficial >= $edad1 && $edad_oficial <= $edad2) {
+    echo "Está en edad para trabajar";
+} else {
+    echo "No puede trabajar";
+}
+echo "<hr/>";
+$pais = 'Mexico';
+
+if($pais == 'Mexico' || $pais == 'España' || $pais == 'Argentina') {
+    echo "En este país se habla español";
+}
+
 ?>
