@@ -30,4 +30,21 @@ if($edad >= $mayoria_edad) {
     echo $nombre . 'no es mayor de edad';
 }
 
+// else-if
+$dia = 3;
+
+if($dia == 1) {
+    echo 'Lunes';
+} else if($dia == 2) {
+    echo 'Martes';
+} else if($dia == 3) {
+    echo 'Miercoles';
+} else if($dia == 4) {
+    echo 'Jueves';
+} else if($dia == 5) {
+    echo 'Viernes';
+} else {
+    echo 'Es fin de semana';
+}
+
 ?>
