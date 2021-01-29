@@ -29,4 +29,16 @@ while($contador <= 10) {
     $contador++;
 }
 
+echo "<br/>";
+
+// Do-while
+$edad = 18;
+$contador = 1;
+
+do {
+    echo "<p>Tienes acceso al local privado $contador</p>";
+    $contador++;
+} while ($edad >= 18 && $contador <= 10);
+
+
 ?>
