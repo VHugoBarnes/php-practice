@@ -58,3 +58,25 @@ echo "<p>$numero1 + $numero2 = " . ($numero1 + $numero2) . "</p>";
 echo "<p>$numero1 - $numero2 = " . ($numero1 - $numero2) . "</p>";
 echo "<p>$numero1 * $numero2 = " . ($numero1 * $numero2) . "</p>";
 echo "<p>$numero1 / $numero2 = " . ($numero1 / $numero2) . "</p>";
+
+/**
+ * Ejercicio 5. Hacer un programa que muestre todos los numeros entre dos números
+ * que nos lleguen por get
+ */
+echo "<h1>Ejercicio 5</h1>";
+
+if(isset($_GET['numero1'])&& isset($_GET['numero2'])) {
+    $numero1 = $_GET['numero1'];
+    $numero2 = $_GET['numero2'];
+
+    if($numero1 < $numero2) {
+        for($i = $numero1; $i <= $numero2; $i++) {
+            echo "<h4>$i</h4>";
+        }
+    } else {
+        echo "<p>El primer número es más pequeño que el segundo</p>";
+    }
+
+} else {
+    echo "<p>Ingresa los números por la url</p>";
+}
