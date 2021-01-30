@@ -37,3 +37,11 @@ function calculadora($numero1, $numero2) {
 }
 
 calculadora(5, 4);
+
+// Returns 
+
+function getNombre($nombre) {
+    return $nombre;
+}
+
+echo "<p>" .getNombre("Keko"). "</p>";
