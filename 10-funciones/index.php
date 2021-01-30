@@ -45,3 +45,21 @@ function getNombre($nombre) {
 }
 
 echo "<p>" .getNombre("Keko"). "</p>";
+
+// Variables globales y locales
+$frase = "Quiero mucho a keko kaka"; // Variable global
+
+echo $frase;
+
+function funcion() {
+
+    global $frase; // uso de una variable global
+
+    echo $frase;
+
+    $year = 2021;
+}
+
+echo $year;
+
+funcion();
