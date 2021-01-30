@@ -20,3 +20,20 @@ function numero($n) {
 }
 
 numero(2);
+
+// Ejemplo 3
+function calculadora($numero1, $numero2) {
+    // Conjunto de instrucciones a ejecutar
+    $suma = $numero1 + $numero2;
+    $resta = $numero1 - $numero2;
+    $multiplicacion = $numero1 * $numero2;
+    $division = $numero1 / $numero2;
+
+    echo "<p>Suma: $suma</p>";
+    echo "<p>Resta: $resta</p>";
+    echo "<p>Multiplicacion: $multiplicacion</p>";
+    echo "<p>Division: $division</p>";
+
+}
+
+calculadora(5, 4);
