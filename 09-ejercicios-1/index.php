@@ -80,3 +80,30 @@ if(isset($_GET['numero1'])&& isset($_GET['numero2'])) {
 } else {
     echo "<p>Ingresa los números por la url</p>";
 }
+
+/**
+ * Ejercicio 6. Mostrar una tabla HTML con las tablas de multiplicar del 1 al 10.
+ */
+echo "<h1>Ejercicio 6</h1>";
+
+echo "<table border='1'> <tr>";
+
+echo "<tr>";
+
+for($cabecera=1; $cabecera<=10; $cabecera++) {
+    echo "<td>Tabla del $cabecera</td>";
+}
+
+echo "</tr>";
+echo "<tr>";
+
+for($i=1; $i<=10; $i++) {
+    echo "<td>";
+    for($x=1; $x<=10; $x++) {
+        echo "$i x $x = " . ($i*$x) . "<br/>";
+    }
+    echo "</td>";
+}
+
+echo "</tr>";
+echo "</table>";
