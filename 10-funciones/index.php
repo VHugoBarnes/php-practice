@@ -63,3 +63,33 @@ function funcion() {
 echo $year;
 
 funcion();
+
+// Funciones predefinidas
+echo "<br/>";
+
+// Debug
+$nombre = "Keko";
+var_dump($nombre);
+echo "<br/>";
+
+// Fechas
+echo date('d-m-Y');
+echo "<br/>";
+
+// Time
+echo time();
+echo "<br/>";
+
+// Funciones matemáticas
+echo "Raiz cuadrada de 10: " . sqrt(10);
+echo "<br/>";
+
+echo "Número aleatorio entre 10 y 40: " . rand(10, 40);
+echo "<br/>";
+
+echo "Número PI: " . pi();
+echo "<br/>";
+
+echo "Redondear: " . round(30.45425, 1);
+echo "<br/>";
+
