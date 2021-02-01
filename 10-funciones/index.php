@@ -93,3 +93,68 @@ echo "<br/>";
 echo "Redondear: " . round(30.45425, 1);
 echo "<br/>";
 
+// Más funciones generales
+echo gettype($nombre);
+echo "<br/>";
+
+// Comprobar si una variable es de un tipo específico
+if(is_string($nombre)) {
+    echo "Esa variable es de tipo string";
+    echo "<br/>";
+} else {
+    echo "Esa variable no es de tipo string";
+    echo "<br/>";
+}
+
+// Comprobar si una variable existe
+if(isset($edades)) {
+    echo "La variable edades existe";
+    echo "<br/>";
+} else {
+    echo "La variable edades no existe";
+    echo "<br/>";
+}
+
+$frase = "     mi contenido    ";
+echo trim($frase);
+echo "<br/>";
+
+// Eliminar variables o índices de arrays
+$year = 2021;
+unset($year);
+var_dump($year);
+echo "<br/>";
+
+// empty - comprobar variables vacías
+// $texto;
+$texto = "";
+
+if(empty($texto)) {
+    echo "La variable está vacía";
+    echo "<br/>";
+} else {
+    echo "La variable no está vacía";
+    echo "<br/>";
+}
+
+// strlen - contar caracteres de un string
+$cadena = "123456";
+
+echo strlen($cadena);
+echo "<br/>";
+
+// strpos - encontrar caracter
+$frase = "Keko kaka";
+echo strpos($frase, 'ko');
+echo "<br/>";
+
+// Reemplazar contenido de un string
+$frase = str_replace('Keko', 'Malia', $frase);
+echo $frase;
+echo "<br/>";
+
+// Convertir a mayúsculas y minúsculas
+echo strtolower($frase);
+echo "<br/>";
+echo strtoupper($frase);
+echo "<br/>";
