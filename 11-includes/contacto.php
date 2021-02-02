@@ -1,6 +1,6 @@
 <?php
 
-include 'includes/cabecera.php';
+require 'includes/cabecera.php';
 
 ?>
 
@@ -12,6 +12,6 @@ include 'includes/cabecera.php';
 
 <?php
 
-include 'includes/footer.php';
+require 'includes/footer.php';
 
 ?>
