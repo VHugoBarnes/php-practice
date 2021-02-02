@@ -69,3 +69,45 @@ echo "<br>";
 foreach ($contactos as $key => $contacto) {
     var_dump($contacto);
 }
+echo "<br>";
+
+// Funciones para arrays
+echo "<h1>Funciones para los arrays</h1>";
+$numeros = [4, 5, 21, 5, 1, 64, 6432, 33, 7];
+asort($artistas);
+var_dump($artistas);
+echo "<br>";
+
+sort($numeros);
+var_dump($numeros);
+echo "<br>";
+
+// añadir elementos a un array
+$artistas[] = "Jazmin Bean";
+array_push($artistas, 'Paramore');
+
+// Eliminar elementos
+array_pop($artistas);
+unset($artistas[2]);
+
+// Aleatorio
+$indice = array_rand($artistas);
+echo $artistas[$indice];
+echo "<br>";
+
+// Dar la vuelta
+var_dump(array_reverse($artistas));
+echo "<br>";
+
+// Buscar dentro de un array
+var_dump(array_search('Aurora', $artistas)); // Obtiene el índice
+echo "<br>";
+
+// Conteo del array
+echo count($artistas);
+echo "<br>";
+echo sizeof($artistas);
+echo "<br>";
+
+var_dump($artistas);
+echo "<br>";
