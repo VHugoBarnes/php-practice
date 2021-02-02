@@ -31,3 +31,13 @@ foreach($artistas as $artista) {
     echo $artista;
     echo "<br>";
 }
+
+// Arrays asociativos
+echo "<h1>Arrays asociativos</h1>";
+$personas = array(
+    'nombre' => 'Víctor',
+    'Apellidos' => 'Vázquez',
+    'edad' => '21'
+);
+
+var_dump($personas);
