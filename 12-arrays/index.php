@@ -41,3 +41,31 @@ $personas = array(
 );
 
 var_dump($personas);
+
+// Arrays multidimiensionales
+
+$contactos = array(
+    array(
+        'nombre' => 'Keko',
+        'email' => 'keko@mail.com'
+    ),
+    array(
+        'nombre' => 'Malia',
+        'email' => 'malia@mail.com'
+    ),
+    array(
+        'nombre' => 'Mochi',
+        'email' => 'mochi@mail.com'
+    ),
+);
+
+echo "<br>";
+echo "<br>";
+var_dump($contactos);
+echo "<br>";
+echo $contactos[1]['nombre'];
+
+echo "<br>";
+foreach ($contactos as $key => $contacto) {
+    var_dump($contacto);
+}
