@@ -68,3 +68,15 @@ for($j=0; $j < count($arr); $j++) {
     echo "<li>". $arr[$j] ."</li>";
 }
 echo "</ul>";
+
+/**
+ * Ejercicio 3. Programa que compruebe si una variable está vacía y si está vacía, 
+ * rellenarla con texto en minúsculas y mostrarlo en mayúsculas y negritas.
+ */
+$frase = "   ";
+echo "<h1>Ejercicio 3</h1>";
+// Comprobar si está vacía
+if(empty(trim($frase))) {
+    $frase = "Hola Keko Kaka ¿Como estas?";
+    echo "<p>La siguiente frase es: <strong>" . strtoupper($frase) . "</strong></p>";
+}
