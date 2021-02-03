@@ -80,3 +80,19 @@ if(empty(trim($frase))) {
     $frase = "Hola Keko Kaka ¿Como estas?";
     echo "<p>La siguiente frase es: <strong>" . strtoupper($frase) . "</strong></p>";
 }
+
+/**
+ * Ejercicio 4. Crear un script en php que tenga 4 variables, una de tipo array,
+ * otra de tipo string, otra int y otra booleana y que imprima un mensaje según
+ * el tipo de variable que sea.
+ */
+echo "<h1>Ejercicio 4</h1>";
+$arreglo2 = array();
+$cadena = "Hola";
+$entero = 2;
+$booleano = true;
+
+echo "<p>La variable \$arreglo2 es de tipo: ". gettype($arreglo2) ."</p>";
+echo "<p>La variable \$cadena es de tipo: ". gettype($cadena) ."</p>";
+echo "<p>La variable \$entero es de tipo: ". gettype($entero) ."</p>";
+echo "<p>La variable \$booleano es de tipo: ". gettype($booleano) ."</p>";
