@@ -96,3 +96,5 @@ echo "<p>La variable \$arreglo2 es de tipo: ". gettype($arreglo2) ."</p>";
 echo "<p>La variable \$cadena es de tipo: ". gettype($cadena) ."</p>";
 echo "<p>La variable \$entero es de tipo: ". gettype($entero) ."</p>";
 echo "<p>La variable \$booleano es de tipo: ". gettype($booleano) ."</p>";
+
+echo "<hr>";
