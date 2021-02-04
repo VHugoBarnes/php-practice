@@ -52,6 +52,18 @@
         <label for="url">url</label>
         <input type="url" name="url" value=""><br>
 
+        <textarea name="area" id="1" cols="30" rows="10"></textarea>
+
+
+        <p>Peliculas:</p>
+        <select name="select" id="2">
+            <option value="">La la land</option>
+            <option value="">Super</option>
+            <option value="">Metalhead</option>
+            <option value="">Avengers</option>
+            <option value="">Spiderman</option>
+        </select>
+
         <input type="submit" value="enviar">
         
     </form>
