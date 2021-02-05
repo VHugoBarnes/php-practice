@@ -13,7 +13,7 @@
 
         if(isset($_GET['error'])) {
             $error = $_GET['error'];
-            if($error == 'faltan_valores') {
+            if($error != 'ok') {
                 echo "<strong style='color: red'>Introduce todos los datos en el formulario</strong>";
             }
         }
@@ -23,11 +23,11 @@
     <form action="procesar_formulario.php" method="post">
         <p>
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" required="required" pattern="[A-Za-z]+">
+            <input type="text" name="nombre" required="required" pattern="[A-Za-z ]+">
         </p>
         <p>
             <label for="apellidos">Apellidos</label>
-            <input type="text" name="apellidos" required pattern="[A-Za-z]+">
+            <input type="text" name="apellidos" required pattern="[A-Za-z ]+">
         </p>
         <p>
             <label for="edad">Edad</label>
