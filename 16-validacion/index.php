@@ -9,6 +9,17 @@
 <body>
     <h1>Validación de formularios en php</h1>
 
+    <?php
+
+        if(isset($_GET['error'])) {
+            $error = $_GET['error'];
+            if($error == 'faltan_valores') {
+                echo "<strong style='color: red'>Introduce todos los datos en el formulario</strong>";
+            }
+        }
+
+    ?>
+
     <form action="procesar_formulario.php" method="post">
         <p>
             <label for="nombre">Nombre</label>
@@ -24,7 +35,7 @@
         </p>
         <p>
             <label for="email">E-Mail</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" >
         </p>
         <p>
             <label for="contrasena">Contraseña</label>
