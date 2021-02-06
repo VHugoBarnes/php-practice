@@ -22,6 +22,19 @@
 // rename('fichero_copiado.txt', 'archivo.md');
 
 // Eliminar un fichero
-unlink('archivo.md') or die("Error al borrar");
+// unlink('archivo.md') or die("Error al borrar");
+
+// Comprobar si un archivo existe o no
+if(file_exists('fichero_texto.txt')) {
+    echo "<h1> <p>El archivo <pre>fichero_texto.txt</pre> existe</p> </h1>";
+} else {
+    echo "<h1> <p>El archivo <pre>fichero_texto.txt</pre> <strong>NO</strong> existe</p> </h1>";
+}
+
+if(file_exists('archivo.md')) {
+    echo "<h1> <p>El archivo <pre>archivo.md</pre> existe</p> </h1>";
+} else {
+    echo "<h1> <p>El archivo <pre>archivo.md</pre> <strong>NO</strong> existe</p> </h1>";
+}
 
 ?>
