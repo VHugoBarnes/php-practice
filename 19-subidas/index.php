@@ -12,5 +12,19 @@
         <input type="file" name="archivo" id="archivo">
         <input type="submit" value="Enviar">
     </form>
+
+    <h1>Listado de imágenes</h1>
+    <?php
+
+        $gestor = opendir('./images');
+        if($gestor):
+            while(($image = readdir($gestor)) !== false):
+                if($image != '.' && $image != '..'):
+                    echo "<img src='images/$image' width=200> <br>";
+                endif;
+            endwhile;
+        endif;
+
+    ?>
 </body>
 </html>
