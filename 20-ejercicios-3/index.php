@@ -5,6 +5,8 @@
  * en función de si el parametro get counter está en uno o cero.
  */
 
+echo "<h1>Ejercicio 1</h1>";
+echo "<hr>";
 // Iniciar sesión
 session_start();
 
@@ -34,5 +36,38 @@ if(isset($_GET['counter'])) {
 } else {
     echo "<h1>No se encontró ningún valor en los parámetros GET</h1>";
 }
+echo "<hr>";
+
+/**
+ * Ejercicio 2. 
+ * 1. Una función
+ * 2. Validar un email con filter_val
+ * 3. Recoger variable por get y validarla
+ * 4. Mostrar un resultado
+ */
+
+echo "<h1>Ejercicio 2</h1>";
+echo "<hr>";
+
+// Crear función
+function validarEmail($email) {
+    // Validar un email con filter_val
+    if( !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+
+        echo "$email es un email correcto";
+
+    } else {
+        echo "No valido";
+    }
+    
+}
+
+if(isset($_GET['email'])) {
+    
+    validarEmail($_GET['email']);
+} else {
+    echo "<h1>Pasa un email por parámetros</h1>";
+}
+
 
 ?>
