@@ -69,5 +69,6 @@ if(isset($_GET['email'])) {
     echo "<h1>Pasa un email por parámetros</h1>";
 }
 
+echo "<hr>";
 
 ?>
