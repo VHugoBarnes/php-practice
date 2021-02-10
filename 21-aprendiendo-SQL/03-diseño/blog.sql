@@ -7,8 +7,9 @@ CREATE TABLE usuarios(
     password    varchar(255) not null,
     fecha       date not null,
 
-    CONSTRAINT pk_usuarios PRIMARY KEY(id)
-);
+    CONSTRAINT pk_usuarios PRIMARY KEY(id),
+    CONSTRAINT uq_email UNIQUE(email)
+)ENGINE=InnoDb;
 
 /* Tabla de categorías */
 CREATE TABLE categorias(
@@ -16,7 +17,7 @@ CREATE TABLE categorias(
     nombre      varchar(100),
 
     CONSTRAINT pk_categorias PRIMARY KEY(id)
-);
+)ENGINE=InnoDb;
 
 /* Tabla de entradas */
 CREATE TABLE entradas(
@@ -30,4 +31,4 @@ CREATE TABLE entradas(
     CONSTRAINT pk_entradas PRIMARY KEY(id),
     CONSTRAINT fk_entrada_usuario FOREIGN KEY(usuario_id) REFERENCES usuarios(id),
     CONSTRAINT fk_entrada_categoria FOREIGN KEY(categoria_id) REFERENCES categorias(id)
-);
+)ENGINE=InnoDb;
