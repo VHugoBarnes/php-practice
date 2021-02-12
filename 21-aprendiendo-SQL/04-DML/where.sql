@@ -20,3 +20,17 @@ SELECT nombre, apellidos FROM usuarios WHERE DAY(fecha) = 09;
 
 -- Mostrar nombres y apellidos de todos los usuarios NO registrados el día 9
 SELECT nombre, apellidos FROM usuarios WHERE DAY(fecha) != 09;
+
+
+-- OPERADORES LÓGICOS --
+-- O    OR
+-- Y    AND
+-- NO   NOT
+
+-- COMODINES --
+-- Cualquier cantidad de caracteres: %
+-- Caracter desconocido: _
+
+-- Mostrar el email de los usuarios cuyo apellido contenga la letra A
+-- y que la contraseña sea 'prueba'
+SELECT email FROM usuarios WHERE apellidos LIKE '%a%' AND password = 'prueba';
