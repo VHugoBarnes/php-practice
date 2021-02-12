@@ -28,3 +28,19 @@ SELECT UPPER(CONCAT(nombre, ' ', apellidos)) AS 'CONVERSION' FROM usuarios;
 SELECT LENGTH(CONCAT(nombre, ' ', apellidos)) AS 'CONVERSION' FROM usuarios;
 SELECT email, LENGTH(CONCAT(nombre, ' ', apellidos)) AS 'CONVERSION' FROM usuarios;
 SELECT TRIM(CONCAT('          ',nombre, ' ', apellidos, '      ')) AS 'CONVERSION' FROM usuarios;
+
+-- Funciones para fechas
+SELECT email, fecha, CURDATE() FROM usuarios;
+SELECT email, DAYNAME(fecha) FROM usuarios;
+SELECT email, DAYOFMONTH(fecha) FROM usuarios;
+SELECT email, DAYOFWEEK(fecha) FROM usuarios;
+SELECT email, DAYOFYEAR(fecha) FROM usuarios;
+SELECT email, MONTH(fecha) FROM usuarios;
+SELECT email, YEAR(fecha) FROM usuarios;
+SELECT email, DAY(fecha) FROM usuarios;
+SELECT email, HOUR(fecha) FROM usuarios;
+SELECT email, MINUTE(fecha) FROM usuarios;
+SELECT email, MINUTE(fecha) FROM usuarios;
+SELECT email, CURTIME() FROM usuarios;
+SELECT email, DATE_FORMAT(fecha, '%d-%m-%Y') FROM usuarios;
+
