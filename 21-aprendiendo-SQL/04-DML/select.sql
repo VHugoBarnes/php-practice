@@ -19,3 +19,12 @@ SELECT RAND() AS 'OPERACION' FROM usuarios;
 SELECT ROUND(7.91, 2) AS 'OPERACION' FROM usuarios;
 SELECT SQRT(7) AS 'OPERACION' FROM usuarios;
 SELECT TRUNCATE(7.91, 1) AS 'OPERACION' FROM usuarios;
+
+-- Funciones para textos
+SELECT UPPER(nombre) FROM usuarios;
+SELECT LOWER(nombre) FROM usuarios;
+SELECT CONCAT(nombre, ' ', apellidos) AS 'CONVERSION' FROM usuarios;
+SELECT UPPER(CONCAT(nombre, ' ', apellidos)) AS 'CONVERSION' FROM usuarios;
+SELECT LENGTH(CONCAT(nombre, ' ', apellidos)) AS 'CONVERSION' FROM usuarios;
+SELECT email, LENGTH(CONCAT(nombre, ' ', apellidos)) AS 'CONVERSION' FROM usuarios;
+SELECT TRIM(CONCAT('          ',nombre, ' ', apellidos, '      ')) AS 'CONVERSION' FROM usuarios;
