@@ -44,3 +44,12 @@ SELECT email, MINUTE(fecha) FROM usuarios;
 SELECT email, CURTIME() FROM usuarios;
 SELECT email, DATE_FORMAT(fecha, '%d-%m-%Y') FROM usuarios;
 
+-- Funciones generales
+SELECT email, ISNULL(apellidos) FROM usuarios;
+SELECT email, STRCMP('keko', 'keko') FROM usuarios;
+SELECT VERSION() FROM usuarios;
+SELECT USER() FROM usuarios;
+SELECT DISTINCT USER() FROM usuarios;
+SELECT DISTINCT DATABASE() FROM usuarios;
+SELECT IFNULL(apellidos, 'VOID') FROM usuarios;
+
