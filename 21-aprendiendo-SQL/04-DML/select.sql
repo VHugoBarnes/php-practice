@@ -10,3 +10,12 @@ SELECT email, (4+7) AS operacion FROM usuarios;
 -- Operador de ordenamiento
 SELECT id, email, (4+7) AS operacion FROM usuarios ORDER BY email;
 
+-- Funciones matemáticas
+SELECT ABS(7) AS 'OPERACION' FROM usuarios;
+SELECT CEIL(7.24) AS 'OPERACION' FROM usuarios;
+SELECT FLOOR(7.24) AS 'OPERACION' FROM usuarios;
+SELECT PI() AS 'OPERACION' FROM usuarios;
+SELECT RAND() AS 'OPERACION' FROM usuarios;
+SELECT ROUND(7.91, 2) AS 'OPERACION' FROM usuarios;
+SELECT SQRT(7) AS 'OPERACION' FROM usuarios;
+SELECT TRUNCATE(7.91, 1) AS 'OPERACION' FROM usuarios;
