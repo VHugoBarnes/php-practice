@@ -17,3 +17,13 @@ IN (SELECT usuario_id
     FROM entradas 
     WHERE titulo 
     LIKE "%novedades%");
+
+-- Sacar todas las entradas de la categoría acción utilizando su nombre
+
+-- Mostrar las categorías con más de 3 entradas
+
+-- Mostrar los usuarios que crearon una entrada el viernes
+
+-- Mostrar el nombre del usuario que tenga más entradas
+
+-- Categorías sin entradas
