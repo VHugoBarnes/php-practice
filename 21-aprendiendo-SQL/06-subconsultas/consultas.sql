@@ -5,4 +5,15 @@
 -- 
 -- Gracias a las Foreign Keys
 
-SELECT * FROM USUARIOS WHERE id IN (SELECT usuario_id FROM entradas);
+-- Sacar usuarios con entradas
+SELECT * FROM usuarios WHERE id IN (SELECT usuario_id FROM entradas);
+
+-- Más ejemplos
+-- Sacar los usuarios que tengan una entrada que en su titulo hable de novedades
+SELECT * 
+FROM usuarios 
+WHERE id 
+IN (SELECT usuario_id 
+    FROM entradas 
+    WHERE titulo 
+    LIKE "%novedades%");
