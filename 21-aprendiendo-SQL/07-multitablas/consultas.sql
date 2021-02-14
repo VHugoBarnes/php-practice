@@ -6,6 +6,12 @@ SELECT u.nombre AS 'Usuario', e.titulo, c.nombre AS 'Categoria'
 FROM entradas e, usuarios u , categorias c
 WHERE e.usuario_id = u.id AND e.categoria_id = c.id;
 
+-- Inner Join
+SELECT u.nombre AS 'Usuario', e.titulo, c.nombre AS 'Categoria'
+FROM entradas e
+INNER JOIN usuarios u ON e.usuario_id = u.id
+INNER JOIN categorias c ON e.categoria_id = c.id;
+
 -- Mostrar el nombre de las categorías y de lado cuántas entradas tienen
 SELECT c.nombre AS 'Categorias', COUNT(e.id)
 FROM categorias c, entradas e
