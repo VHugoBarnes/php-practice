@@ -18,6 +18,12 @@ FROM categorias c, entradas e
 WHERE e.categoria_id = c.id
 GROUP BY e.categoria_id;
 
+-- Left Joint
+SELECT c.nombre AS 'Categorias', COUNT(e.id)
+FROM categorias c
+LEFT JOIN entradas e ON e.categoria_id = c.id
+GROUP BY e.categoria_id;
+
 -- Mostrar el email de los usuarios y de lado cuántas entradas tienen
 SELECT u.email, COUNT(e.id) AS "N° de entradas"
 FROM usuarios u, entradas e
