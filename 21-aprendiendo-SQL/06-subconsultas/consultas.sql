@@ -18,12 +18,40 @@ IN (SELECT usuario_id
     WHERE titulo 
     LIKE "%novedades%");
 
--- Sacar todas las entradas de la categoría acción utilizando su nombre
+-- Sacar todas las entradas de la categoría Python utilizando su nombre
+SELECT titulo, descripcion 
+FROM entradas 
+WHERE categoria_id 
+IN (SELECT id 
+    FROM categorias 
+    WHERE nombre = 'Python');
 
 -- Mostrar las categorías con más de 3 entradas
+SELECT nombre
+FROM categorias
+WHERE id
+IN (SELECT categoria_id
+    FROM entradas
+    GROUP BY categoria_id HAVING COUNT(categoria_id) >= 3);
 
--- Mostrar los usuarios que crearon una entrada el viernes
+-- Mostrar los usuarios que crearon una entrada el wednesday
+SELECT nombre, apellidos
+FROM usuarios
+WHERE DAYNAME(fecha) = 'wednesday';
 
 -- Mostrar el nombre del usuario que tenga más entradas
+SELECT nombre, apellidos
+FROM usuarios
+WHERE id
+IN (
+    SELECT MAX(usuario_id)
+    FROM entradas
+);
 
 -- Categorías sin entradas
+SELECT id, nombre
+FROM categorias
+WHERE id NOT IN (
+    SELECT categoria_id
+    FROM entradas
+);
