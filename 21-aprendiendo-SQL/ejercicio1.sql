@@ -1,4 +1,9 @@
 -- Diseñar y crear la base de datos de un concesionario
+
+CREATE DATABASE IF NOT EXISTS concesionario;
+
+USE concesionario;
+
 CREATE TABLE coches(
     id      int(10) auto_increment not null,
     modelo  varchar(100) not null,
@@ -56,3 +61,5 @@ CREATE TABLE encargos(
     CONSTRAINT fk_encargo_cliente FOREIGN KEY(cliente_id) REFERENCES clientes(id),
     CONSTRAINT fk_encargo_coche FOREIGN KEY(coche_id) REFERENCES coches(id)
 )ENGINE=InnoDB;
+
+-- Rellenar la base de datos con información (INSERTS)
