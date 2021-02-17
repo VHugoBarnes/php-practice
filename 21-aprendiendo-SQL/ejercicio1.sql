@@ -95,5 +95,17 @@ INSERT INTO vendedores VALUES(NULL, 6, NULL, 'Joaquin', 'Lopez', 'Ejecutivo de c
 INSERT INTO vendedores VALUES(NULL, 6, 8, 'Luis', 'Lopez', 'Ayudante en tienda', CURDATE(), 10000, 10);
 
 -- Clientes
+INSERT INTO clientes VALUES(NULL, 1, 'Construcciones Diaz Inc', 'Alcobendas', 24000 , CURDATE());
+INSERT INTO clientes VALUES(NULL, 1, 'Fruteria Antonia Inc', 'Fuenlabrada', 40000, CURDATE());
+INSERT INTO clientes VALUES(NULL, 1, 'Imprenta Martinez Inc', 'Barcelona', 32000, CURDATE());
+INSERT INTO clientes VALUES(NULL, 1, 'Jesus Colchones Inc', 'El Prat', 96000, CURDATE());
+INSERT INTO clientes VALUES(NULL, 1, 'Bar Pepe Inc', 'Valencia', 170000, CURDATE());
+INSERT INTO clientes VALUES(NULL, 1, 'Tienda PC Inc', 'Murcia', 245000, CURDATE());
 
 -- Encargos
+INSERT INTO encargos VALUES(NULL, 1, 1, 2, CURDATE());
+INSERT INTO encargos VALUES(NULL, 2, 2, 4, CURDATE());
+INSERT INTO encargos VALUES(NULL, 3, 3, 1, CURDATE());
+INSERT INTO encargos VALUES(NULL, 4, 3, 3, CURDATE());
+INSERT INTO encargos VALUES(NULL, 5, 5, 1, CURDATE());
+INSERT INTO encargos VALUES(NULL, 6, 6, 1, CURDATE());
