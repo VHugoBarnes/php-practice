@@ -2,4 +2,5 @@
 -- cargo
 
 SELECT cargo, COUNT(id)
-FROM vendedores;
+FROM vendedores
+GROUP BY cargo;
