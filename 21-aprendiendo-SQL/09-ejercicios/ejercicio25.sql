@@ -4,7 +4,9 @@
 SELECT cl.nombre, SUM(e.cantidad * co.precio)
 FROM encargos e
 INNER JOIN clientes cl ON cl.id = e.cliente_id
-INNER JOIN coches co ON co.id = e.coche_id;
+INNER JOIN coches co ON co.id = e.coche_id
+GROUP BY cl.nombre
+ORDER BY 2 ASC;
 
 SELECT ci.nombre, SUM(precio*cantidad) AS 'Importe'
 FROM clientes ci
