@@ -2,7 +2,7 @@
 
 // Conectar a la base de datos
 // Host, user, password, database
-$conexion = mysqli_connect("localhost", "root", "erinhannon21", "phpmysql");
+$conexion = mysqli_connect("localhost", "root", "", "phpmysql");
 
 // Comprobar si la conexión es correcta
 if(mysqli_connect_errno()) {
@@ -26,3 +26,12 @@ while($nota = mysqli_fetch_assoc($query)) {
     echo "<br>";
 }
 
+// Insertar en la base de datos desde PHP
+$sql = "INSERT INTO notas VALUES(null, 'Nota desde PHP', 'Esto es una nota de PHP', 'green');";
+$insert = mysqli_query($conexion, $sql);
+
+if($insert) {
+    echo "<h2>Datos insertados correctamente</h2>";
+} else {
+    echo "<h2>". mysqli_error($conexion) ."</h2>";
+}
