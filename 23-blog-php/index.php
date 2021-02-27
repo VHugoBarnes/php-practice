@@ -9,7 +9,7 @@
 <body>
     
     <!-- Cabecera -->
-    <header id="header">
+    <header id="cabecera">
         <!-- Logo -->
         <div id="logo">
             <a href="index.php">
@@ -17,7 +17,7 @@
             </a>
         </div>
         <!-- Menu -->
-        <nav id="nav">
+        <nav id="menu">
             <ul>
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="index.php">Categoría 1</a></li>
@@ -30,10 +30,91 @@
         </nav>
     </header>
 
-
+    <div id="contenedor">
     <!-- Barra lateral -->
+    <aside id="barraLateral">
+        <!-- LOGIN -->
+        <div id="inicioSesion" class="block-aside">
+            <h3>Identifícate</h3>
+            <form action="inicioSesion.php" method="POST">
+                <label for="correo">e-mail</label>
+                <input type="email" name="correo">
+
+                <label for="contrasena">Contraseña</label>
+                <input type="passwords" name="contrasena">
+
+                <input type="submit" value="Entrar">
+            </form>
+        </div>
+        <!-- REGISTER -->
+        <div id="registro" class="block-aside">
+            <h3>Regístrate</h3>
+            <form action="registro.php" method="POST">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre">
+
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos">
+
+                <label for="correo">e-mail</label>
+                <input type="email" name="correo">
+
+                <label for="contrasena">Contraseña</label>
+                <input type="passwords" name="contrasena">
+
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </aside>
 
     <!-- Caja principal -->
+    <div id="principal">
+
+        <h1>Últimas entradas</h1>
+        <article class="entrada">
+            <h2>Titulo de mi entrada</h2>
+            <p>
+                Ullamco officia nostrud qui fugiat sint commodo nulla occaecat. Ut dolore ea incididunt sit dolor mollit ut esse magna nulla. Eu duis commodo magna sunt sunt fugiat proident nostrud officia fugiat sunt enim aute. Culpa labore cupidatat dolor duis fugiat ea.
+                Laboris officia laborum magna in adipisicing excepteur aliqua culpa non excepteur irure excepteur. Tempor consectetur aliqua excepteur eu. Qui incididunt in pariatur velit tempor incididunt.
+                Mollit sint ullamco amet amet laboris ex non nostrud nostrud. Magna excepteur ut occaecat ad commodo sit nisi amet dolore incididunt ea anim excepteur laboris. Tempor labore dolore ullamco fugiat. Velit incididunt enim consectetur eiusmod ullamco sunt. Dolore reprehenderit laborum cillum tempor pariatur laborum ullamco reprehenderit mollit irure sunt anim officia sunt.
+            </p>
+        </article>
+        <article class="entrada">
+            <h2>Titulo de mi entrada</h2>
+            <p>
+                Ullamco officia nostrud qui fugiat sint commodo nulla occaecat. Ut dolore ea incididunt sit dolor mollit ut esse magna nulla. Eu duis commodo magna sunt sunt fugiat proident nostrud officia fugiat sunt enim aute. Culpa labore cupidatat dolor duis fugiat ea.
+                Laboris officia laborum magna in adipisicing excepteur aliqua culpa non excepteur irure excepteur. Tempor consectetur aliqua excepteur eu. Qui incididunt in pariatur velit tempor incididunt.
+                Mollit sint ullamco amet amet laboris ex non nostrud nostrud. Magna excepteur ut occaecat ad commodo sit nisi amet dolore incididunt ea anim excepteur laboris. Tempor labore dolore ullamco fugiat. Velit incididunt enim consectetur eiusmod ullamco sunt. Dolore reprehenderit laborum cillum tempor pariatur laborum ullamco reprehenderit mollit irure sunt anim officia sunt.
+            </p>
+        </article>
+        <article class="entrada">
+            <h2>Titulo de mi entrada</h2>
+            <p>
+                Ullamco officia nostrud qui fugiat sint commodo nulla occaecat. Ut dolore ea incididunt sit dolor mollit ut esse magna nulla. Eu duis commodo magna sunt sunt fugiat proident nostrud officia fugiat sunt enim aute. Culpa labore cupidatat dolor duis fugiat ea.
+                Laboris officia laborum magna in adipisicing excepteur aliqua culpa non excepteur irure excepteur. Tempor consectetur aliqua excepteur eu. Qui incididunt in pariatur velit tempor incididunt.
+                Mollit sint ullamco amet amet laboris ex non nostrud nostrud. Magna excepteur ut occaecat ad commodo sit nisi amet dolore incididunt ea anim excepteur laboris. Tempor labore dolore ullamco fugiat. Velit incididunt enim consectetur eiusmod ullamco sunt. Dolore reprehenderit laborum cillum tempor pariatur laborum ullamco reprehenderit mollit irure sunt anim officia sunt.
+            </p>
+        </article>
+        <article class="entrada">
+            <h2>Titulo de mi entrada</h2>
+            <p>
+                Ullamco officia nostrud qui fugiat sint commodo nulla occaecat. Ut dolore ea incididunt sit dolor mollit ut esse magna nulla. Eu duis commodo magna sunt sunt fugiat proident nostrud officia fugiat sunt enim aute. Culpa labore cupidatat dolor duis fugiat ea.
+                Laboris officia laborum magna in adipisicing excepteur aliqua culpa non excepteur irure excepteur. Tempor consectetur aliqua excepteur eu. Qui incididunt in pariatur velit tempor incididunt.
+                Mollit sint ullamco amet amet laboris ex non nostrud nostrud. Magna excepteur ut occaecat ad commodo sit nisi amet dolore incididunt ea anim excepteur laboris. Tempor labore dolore ullamco fugiat. Velit incididunt enim consectetur eiusmod ullamco sunt. Dolore reprehenderit laborum cillum tempor pariatur laborum ullamco reprehenderit mollit irure sunt anim officia sunt.
+            </p>
+        </article>
+        <article class="entrada">
+            <h2>Titulo de mi entrada</h2>
+            <p>
+                Ullamco officia nostrud qui fugiat sint commodo nulla occaecat. Ut dolore ea incididunt sit dolor mollit ut esse magna nulla. Eu duis commodo magna sunt sunt fugiat proident nostrud officia fugiat sunt enim aute. Culpa labore cupidatat dolor duis fugiat ea.
+                Laboris officia laborum magna in adipisicing excepteur aliqua culpa non excepteur irure excepteur. Tempor consectetur aliqua excepteur eu. Qui incididunt in pariatur velit tempor incididunt.
+                Mollit sint ullamco amet amet laboris ex non nostrud nostrud. Magna excepteur ut occaecat ad commodo sit nisi amet dolore incididunt ea anim excepteur laboris. Tempor labore dolore ullamco fugiat. Velit incididunt enim consectetur eiusmod ullamco sunt. Dolore reprehenderit laborum cillum tempor pariatur laborum ullamco reprehenderit mollit irure sunt anim officia sunt.
+            </p>
+        </article>
+    
+    </div>
+
+    </div>
 
     <!-- Pie de página -->
 
