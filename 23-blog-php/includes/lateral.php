@@ -3,11 +3,11 @@
     <div id="inicioSesion" class="block-aside">
         <h3>Identifícate</h3>
         <form action="inicioSesion.php" method="POST">
-            <label for="correo">e-mail</label>
-            <input type="email" name="correo">
+            <label for="email">e-mail</label>
+            <input type="email" name="email">
 
-            <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena">
+            <label for="password">Contraseña</label>
+            <input type="password" name="password">
 
             <input type="submit" value="Entrar">
         </form>
@@ -22,13 +22,13 @@
             <label for="apellidos">Apellidos</label>
             <input type="text" name="apellidos">
 
-            <label for="correo">e-mail</label>
-            <input type="email" name="correo">
+            <label for="email">e-mail</label>
+            <input type="email" name="email">
 
-            <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena">
+            <label for="password">Contraseña</label>
+            <input type="password" name="password">
 
-            <input type="submit" value="Registrarse">
+            <input type="submit" name="submit" value="Registrarse">
         </form>
     </div>
 </aside>
