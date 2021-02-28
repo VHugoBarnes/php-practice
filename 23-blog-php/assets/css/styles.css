@@ -1,0 +1,24 @@
+/* Importar fuentes */
+@font-face {
+    font-family: "Fajala";
+    src: url('../fonts/fuente.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Helvetica, Arial;
+    text-decoration: none;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+body {
+    background: url('../img/cubes.png') #f4f4f4;
+}
