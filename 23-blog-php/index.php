@@ -43,7 +43,7 @@
                 <input type="email" name="correo">
 
                 <label for="contrasena">Contraseña</label>
-                <input type="passwords" name="contrasena">
+                <input type="password" name="contrasena">
 
                 <input type="submit" value="Entrar">
             </form>
@@ -62,7 +62,7 @@
                 <input type="email" name="correo">
 
                 <label for="contrasena">Contraseña</label>
-                <input type="passwords" name="contrasena">
+                <input type="password" name="contrasena">
 
                 <input type="submit" value="Registrarse">
             </form>
