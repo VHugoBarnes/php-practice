@@ -23,6 +23,21 @@ body {
     background: url('../img/cubes.png') #f4f4f4;
 }
 
+.alerta {
+    color: white;
+    background: #219653;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px #cccccc;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.alerta-error {
+    background: #EB5757;
+}
+
 /* Cabecera */
 #cabecera {
     background: transparent;
