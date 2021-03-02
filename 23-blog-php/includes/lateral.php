@@ -1,9 +1,15 @@
 <?php require_once 'includes/helpers.php' ?>
 <aside id="barraLateral">
     <!-- LOGIN -->
+
+    <?php if(isset($_SESSION['usuario'])): ?>
+        <div id="usuario-logueado" class="block-aside">
+            <h3>Bienvenido, <?= $_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'] ?></h3>
+        </div>
+    <?php endif; ?>
     <div id="inicioSesion" class="block-aside">
         <h3>Identifícate</h3>
-        <form action="inicioSesion.php" method="POST">
+        <form action="login.php" method="POST">
             <label for="email">e-mail</label>
             <input type="email" name="email">
 
