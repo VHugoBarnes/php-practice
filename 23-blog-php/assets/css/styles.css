@@ -153,7 +153,8 @@ input[type="password"] {
 }
 
 input[type="button"],
-input[type="submit"] {
+input[type="submit"],
+.boton {
     display: block;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -163,6 +164,21 @@ input[type="submit"] {
     border: 1px solid #156785;
     cursor: pointer;
     padding: 7px;
+}
+
+.boton {
+    text-align: center;
+    width: 40%;
+}
+
+.boton-verde {
+    background-color: #27AE60;
+    border: 1px solid green;
+}
+
+.boton-naranja {
+    background-color: #F2994A;
+    border: 1px solid rgb(175, 116, 6);
 }
 
 /* Parte central */
