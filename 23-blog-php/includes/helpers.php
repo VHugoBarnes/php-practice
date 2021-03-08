@@ -28,3 +28,21 @@ function borrarError() {
     }
     return $borrado;
 }
+
+function conseguirCategorias($conexion) {
+
+    // Query
+    $sql = "SELECT * FROM categorias ORDER BY id ASC;";
+
+    //Ejecución del query
+    $categorias = mysqli_query($conexion, $sql);
+    $resultado_query = array();
+
+    // Comprobar si devuelve resultados
+    if($categorias && mysqli_num_rows($categorias) >= 1) {
+        $resultado_query = $categorias;
+    }
+
+    return $resultado_query;
+
+}
