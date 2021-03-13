@@ -16,7 +16,7 @@
         <!-- Logo -->
         <div id="logo">
             <a href="index.php">
-                Blog de Videojuegos
+                Blog de Programación
             </a>
         </div>
         <!-- Menu -->
@@ -26,14 +26,18 @@
                 <!-- Bucle de categorias -->
                 <?php   
                     $categorias = conseguirCategorias($db);
-                    while($categoria = mysqli_fetch_assoc($categorias)): 
+                    if( !empty($categorias) ):
+                        while($categoria = mysqli_fetch_assoc($categorias)): 
                 ?>
-                    <li>
-                        <a href="categoria.php?id=<?=$categoria['id']?>">
-                            <?=$categoria['nombre']?>
-                        </a>
-                    </li>
-                <?php endwhile; ?>
+                        <li>
+                            <a href="categoria.php?id=<?=$categoria['id']?>">
+                                <?=$categoria['nombre']?>
+                            </a>
+                        </li>
+                <?php 
+                        endwhile; 
+                    endif;
+                ?>
                 <!-- Fin del bucle -->
                 <li><a href="index.php">Sobre mí</a></li>
                 <li><a href="index.php">Contacto</a></li>
