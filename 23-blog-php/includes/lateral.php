@@ -11,6 +11,8 @@
             <a href="cerrar.php" class="boton boton-rojo">Cerrar sesión</a>
         </div>
     <?php endif; ?>
+
+    <?php if( !isset($_SESSION['usuario'])): ?>
     <div id="inicioSesion" class="block-aside">
         <h3>Identifícate</h3>
 
@@ -19,7 +21,7 @@
                 <?= $_SESSION['error_login']; ?>
             </div>
         <?php endif; ?>
-
+    
         <form action="login.php" method="POST">
             <label for="email">e-mail</label>
             <input type="email" name="email">
@@ -64,4 +66,5 @@
         </form>
         <?php borrarError() ?>
     </div>
+    <?php endif; ?>
 </aside>

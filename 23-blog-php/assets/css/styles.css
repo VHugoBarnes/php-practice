@@ -242,6 +242,12 @@ input[type="submit"],
     margin-top: 50px;
 }
 
+.fecha {
+    color: #b3b3b3;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
 /* Pie de página */
 #pie {
     width: 85%;
