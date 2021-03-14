@@ -47,27 +47,35 @@ if( isset($_POST) ) {
 
     $guardar_usuario = false;
     if( count($errores) == 0 ) {
+        $usuario = $_SESSION['usuario'];
         $guardar_usuario = true;
 
-        // Actualizar usuario en la base de datos
-        $usuario = $_SESSION['usuario'];
-        $sql = "UPDATE usuarios SET ".
-               "nombre = '$nombre', ".
-               "apellidos = '$apellidos', ".
-               "email = '$email' ".
-               "WHERE id = " . $usuario['id'];
-        $guardar = mysqli_query($db, $sql);
+        // Comprobar si el email ya existe
+        $sql = "SELECT id, email from usuarios WHERE email = '$email'";
+        $isset_email = mysqli_query($db, $sql);
+        $isset_user = mysqli_fetch_assoc($isset_email);
 
-        if( $guardar ) {
-            $_SESSION['usuario']['nombre'] = $nombre;
-            $_SESSION['usuario']['apellidos'] = $apellidos;
-            $_SESSION['usuario']['email'] = $email;
-
-            $_SESSION['completado'] = "Tus datos se han actualizado con éxito";
+        if( $isset_user['id'] == $usuario['id'] || empty($isset_user) ){
+            // Actualizar usuario en la base de datos
+            $sql = "UPDATE usuarios SET ".
+                   "nombre = '$nombre', ".
+                   "apellidos = '$apellidos', ".
+                   "email = '$email' ".
+                   "WHERE id = " . $usuario['id'];
+            $guardar = mysqli_query($db, $sql);
+    
+            if( $guardar ) {
+                $_SESSION['usuario']['nombre'] = $nombre;
+                $_SESSION['usuario']['apellidos'] = $apellidos;
+                $_SESSION['usuario']['email'] = $email;
+    
+                $_SESSION['completado'] = "Tus datos se han actualizado con éxito";
+            } else {
+                $_SESSION['errores']['general'] = "Fallo al actualizar tus datos";
+            }
         } else {
-            $_SESSION['errores']['general'] = "Fallo al actualizar tus datos";
+            $_SESSION['errores']['general'] = "El usuario ya existe";
         }
-
 
     } else {
         $_SESSION['errores'] = $errores;
