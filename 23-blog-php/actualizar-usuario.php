@@ -50,16 +50,16 @@ if( isset($_POST) ) {
         $guardar_usuario = true;
 
         // Actualizar usuario en la base de datos
-        $usuario = $_SESSION['ususario'];
+        $usuario = $_SESSION['usuario'];
         $sql = "UPDATE usuarios SET ".
                "nombre = '$nombre', ".
                "apellidos = '$apellidos', ".
                "email = '$email' ".
-               "WHERE id = " . $usuario['id'] . ";";
+               "WHERE id = " . $usuario['id'];
         $guardar = mysqli_query($db, $sql);
 
         if( $guardar ) {
-            $_SESSION['usuario']['nombre'] = $usuario;
+            $_SESSION['usuario']['nombre'] = $nombre;
             $_SESSION['usuario']['apellidos'] = $apellidos;
             $_SESSION['usuario']['email'] = $email;
 
