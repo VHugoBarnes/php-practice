@@ -24,7 +24,7 @@
     
     <?php if( isset($_SESSION['usuario']) && $_SESSION['usuario']['id'] == $entrada_actual['usuario_id'] ): ?>
         <a href="editar-entrada.php" class="boton boton-azul">Editar entrada</a>
-        <a href="borrar-entrada.php" class="boton boton-rojo">Eliminar entrada</a>
+        <a href="borrar-entrada.php?id=<?=$entrada_actual['id']?>" class="boton boton-rojo">Eliminar entrada</a>
     <?php endif; ?>
 
 </div>
