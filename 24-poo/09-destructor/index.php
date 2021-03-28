@@ -6,9 +6,16 @@ class Usuario {
     public $email;
 
     public function __construct() {
+
+        $this -> nombre = 'Víctor Vázquez';
+        $this -> email = 'hugo@vazquez.com';
         
         echo "<pre>Instancia del objeto creada</pre>";
 
+    }
+
+    public function __toString() {
+        return "Hola, {$this -> nombre}, estás registrado con: {$this -> email}";
     }
 
     public function __destruct() {
@@ -18,7 +25,9 @@ class Usuario {
 }
 
 $usuario = new Usuario();
+echo "<pre>". $usuario -> nombre ."</pre>";
+echo "<pre>". $usuario ."</pre>";
 
-for ($i=0; $i <= 200; $i++) { 
-    echo $i . "<br>";
-}
+// for ($i=0; $i <= 200; $i++) { 
+//     echo $i . "<br>";
+// }
