@@ -23,13 +23,18 @@ class Principal {
         
     }
 
+    public function informacion() {
+
+        echo __CLASS__;
+
+    }
+
 }
 // Objeto principal
 $principal = new Principal();
+$principal -> informacion();
 echo "<pre> " , var_export($principal -> usuario) , " </pre>";
 
 // Objeto nuevo
 $admin = new UsuarioAdmin();
 echo "<pre> " , var_export($admin -> nombre) , " </pre>";
-
-die();
