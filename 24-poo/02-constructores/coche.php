@@ -48,4 +48,16 @@ class Coche {
         return $this -> modelo;
     }
 
+    public function mostrarInformacion(Coche $miObjeto) {
+        $informacion = "<h1>Información del coche</h1>";
+        $informacion .= "<p>Color del coche: " . $miObjeto -> color . "</p>";
+        $informacion .= "<p>Marca del coche: " . $miObjeto -> marca . "</p>";
+        $informacion .= "<p>Modelo del coche: " . $miObjeto -> modelo . "</p>";
+        $informacion .= "<p>Velocidad del coche: " . $miObjeto -> velocidad . "</p>";
+        $informacion .= "<p>Caballaje del coche: " . $miObjeto -> caballaje . "</p>";
+        $informacion .= "<p>Plazas del coche: " . $miObjeto -> plazas . "</p>";
+
+        return $informacion;
+    }
+
 }
