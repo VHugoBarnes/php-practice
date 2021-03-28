@@ -1,12 +1,35 @@
 <?php
 
 require_once 'autoload.php';
-// require_once 'clases/usuario.php';
-// require_once 'clases/categoria.php';
-// require_once 'clases/entrada.php';
 
-$usuario = new Usuario();
-echo $usuario -> nombre;
+// Espacios de nombres y paquetes
 
-$categoria = new Categoria();
-echo $categoria -> nombre;
+use MisClases\Usuario;
+use MisClases\Categoria;
+use MisClases\Entrada;
+use PanelAdministrador\Usuario as UsuarioAdmin;
+
+class Principal {
+
+    public $usuario;
+    public $categoria;
+    public $entrada;
+
+    public function __construct() {
+
+        $this -> usuario = new Usuario();
+        $this -> categoria = new Categoria();
+        $this -> entrada = new Entrada();
+        
+    }
+
+}
+// Objeto principal
+$principal = new Principal();
+echo "<pre> " , var_export($principal -> usuario) , " </pre>";
+
+// Objeto nuevo
+$admin = new UsuarioAdmin();
+echo "<pre> " , var_export($admin -> nombre) , " </pre>";
+
+die();

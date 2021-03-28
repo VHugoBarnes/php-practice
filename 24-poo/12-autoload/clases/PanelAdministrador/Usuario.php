@@ -1,5 +1,7 @@
 <?php
 
+namespace PanelAdministrador;
+
 class Usuario {
 
     public $nombre;
@@ -7,8 +9,8 @@ class Usuario {
 
 
     public function __construct() {
-        $this -> nombre = 'Víctor';
-        $this -> email = 'hugovg799@gmail.com';
+        $this -> nombre = 'Keko';
+        $this -> email = 'keko@gmail.com';
     }
 
 }
