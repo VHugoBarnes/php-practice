@@ -1,4 +1,14 @@
 <aside id="barraLateral">
+
+    <div id="buscador" class="block-aside">
+        <h3>Buscar</h3>
+    
+        <form action="buscar.php" method="POST">
+            <input type="text" name="busqueda">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
+
     <!-- LOGIN -->
 
     <?php if(isset($_SESSION['usuario'])): ?>
