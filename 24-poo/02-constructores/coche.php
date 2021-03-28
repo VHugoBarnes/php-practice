@@ -4,8 +4,8 @@ class Coche {
 
     // Atributos
     public $color;
-    public $marca;
-    public $modelo;
+    protected $marca;
+    private $modelo;
     public $velocidad;
     public $caballaje;
     public $plazas;
