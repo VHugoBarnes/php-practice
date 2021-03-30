@@ -45,8 +45,4 @@ class Usuario extends ModeloBase{
         $this->password = $password;
     }
 
-    // public function conseguirTodos() {
-    //     return "Sacando todos los usuarios";
-    // }
-
 }
