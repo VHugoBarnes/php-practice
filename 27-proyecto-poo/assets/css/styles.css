@@ -2,6 +2,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-family: sans-serif, Helvetica, Arial;
 }
 
 body {
@@ -28,42 +29,83 @@ a:hover() {
     background: white;
 }
 
-/* HEADER */
-#header {
-    height: 145px;
-    background: #f0f0f0;
+/*HEADER*/
+
+#header{
+    height: 180px;
+    background: #F0F0F0;
 }
 
-#logo {
+#logo{
     padding: 20px;
     margin-left: 20px;
-    float: left;
+    float:left;
 }
 
-#logo img {
+#logo img{
+    float:left;
     height: 100px;
-    float: left;
 }
 
-#logo a {
-    float: left;
+#logo a{
+    float:left;
     font-size: 40px;
     letter-spacing: 4px;
-    font-family: 'open sans', Helvetica, Arial;
+    font-family: 'Open Sans', Helvetica, Arial;
     text-transform: uppercase;
-    color: #01b1ea;
+    color: #01B1EA;
     font-weight: bold;
     text-decoration: none;
     margin-top: 18px;
     margin-left: 25px;
-    text-shadow: 0px 2px 1px #222;
+    text-shadow: 0px 2px 1px #222222;
     transition: all 300ms;
 }
 
-#logo a:hover {
-    text-shadow: 0px 2px 1px #222, 0px 0px 4px #01b1ea;
+#logo a:hover{
+    text-shadow: 0px 2px 1px #222222, 0px 0px 4px #01B1EA;
 }
 
+/* MENU */
+#menu {
+    background-color: #222;
+    color: white;
+    height: 55px;
+    clear: both;
+    border-bottom: 4px solid #01b1ea;
+}
+
+#menu ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 25px;
+}
+
+#menu ul li {
+    line-height: 55px;
+    float: left;
+    border-right: 1px solid #363636;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding-left: 12px;   
+    padding-right: 12px;
+    transition: all 300ms;
+}
+
+#menu a:first-child {
+    border-left: 1px solid #363636;
+}
+
+#menu a:hover {
+    background-color: #01b1ea;
+}
+
+/* PRODUCTOS */
 .product img {
     width: 100px;
 }
