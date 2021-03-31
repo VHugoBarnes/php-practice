@@ -1,6 +1,8 @@
 <?php
 
 require_once 'autoload.php';
+require_once 'views/layout/header.php';
+require_once 'views/layout/sidebar.php';
 
 // Si viene por parametro y si existe la clase
 if( isset($_GET['controller']) && class_exists($_GET['controller'].'Controller') ) {
@@ -23,3 +25,5 @@ if( isset($_GET['controller']) && class_exists($_GET['controller'].'Controller')
 } else {
     echo "<pre>El controlador que buscas no existe</pre>";
 }
+
+require_once 'views/layout/footer.php';
