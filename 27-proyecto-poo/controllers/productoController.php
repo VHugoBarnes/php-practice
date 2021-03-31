@@ -1,6 +1,6 @@
 <?php
 
-class ProductoController {
+class productoController {
 
     public function index() {
         require_once 'views/product/destacados.php';
