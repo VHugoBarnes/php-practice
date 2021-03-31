@@ -35,6 +35,17 @@ a:hover() {
     color: white;
 }
 
+table {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #555;
+}
+
+td {
+    border-top: 1px solid #ccc;
+    padding: 2px;
+}
+
 /* CONTAINER */
 .container {
     width: 80%;
@@ -219,6 +230,12 @@ button,
     border: 1px solid #267426;
     color: white !important;
     text-decoration: none;
+}
+
+.button-small {
+    width: 15%;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 label,

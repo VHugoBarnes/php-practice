@@ -1,9 +1,15 @@
 <?php
 
+require_once 'models/Categoria.php';
+
 class categoriaController {
 
     public function index() {
-        echo "Controlador Categorias, Acción index";
+
+        $categoria = new Categoria();
+        $categorias = $categoria->getAll();
+
+        require_once 'views/categoria/index.php';
     }
 
 }
