@@ -21,6 +21,20 @@ a:hover() {
     color: #555;
 }
 
+.alert_green {
+    background: #34a034;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+}
+
+.alert_red {
+    background: #e03f39;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+}
+
 /* CONTAINER */
 .container {
     width: 80%;
