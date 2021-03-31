@@ -1,8 +1,14 @@
 <?php
 
 require_once 'autoload.php';
+require_once 'config/parameters.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php';
+
+function showError() {
+    $error = new ErrorController();
+    $error->index();
+}
 
 // Si viene por parametro y si existe la clase
 if( isset($_GET['controller']) && class_exists($_GET['controller'].'Controller') ) {
@@ -19,11 +25,20 @@ if( isset($_GET['controller']) && class_exists($_GET['controller'].'Controller')
         $controlador -> $action();
 
     } else {
-        echo "<pre>La acción que buscas no existe</pre>";
+        // echo "<pre>La acción que buscas no existe</pre>";
+        showError();
     }
 
-} else {
-    echo "<pre>El controlador que buscas no existe</pre>";
+} else if( !isset($_GET['controller']) && !isset($_GET['action']) ) {
+
+        $nombreControlador = controllerDefualt;
+        $controlador = new $nombreControlador();
+        $action = actionDefualt;
+        $controlador->$action();
+
+}else {
+    // echo "<pre>El controlador que buscas no existe</pre>";
+    showError();
 }
 
 require_once 'views/layout/footer.php';
