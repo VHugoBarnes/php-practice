@@ -1,7 +1,5 @@
 <?php
 
-use Spipu\Html2Pdf\Tag\Html\U;
-
 require_once 'models/Producto.php';
 
 class productoController {
@@ -28,8 +26,32 @@ class productoController {
     public function save() {
         Utils::isAdmin();
         if( $_POST ) {
-            var_dump($_POST);
+            $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
+            $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : false;
+            $precio = isset($_POST['precio']) ? $_POST['precio'] : false;
+            $stock = isset($_POST['stock']) ? $_POST['stock'] : false;
+            $categoria = isset($_POST['categoria']) ? $_POST['categoria'] : false;
+            //$imagen = isset($_POST['imagen']) ? $_POST['imagen'] : false;
+
+            if( $nombre && $descripcion && $precio && $stock && $categoria ) {
+                $producto = new Producto();
+                $producto->setNombre($nombre);
+                $producto->setDescripcion($descripcion);
+                $producto->setPrecio($precio);
+                $producto->setStock($stock);
+                $producto->setCategoria_id($categoria);
+
+                $save = $producto->save();
+                $save ? $_SESSION['producto'] = 'complete' : $_SESSION['producto'] = 'failed';
+            } else {
+                $_SESSION['producto'] = 'failed';
+            }
+
+        } else {
+            $_SESSION['producto'] = 'failed';
         }
+
+        header("Location: ".base_url."producto/gestion");
 
     }
 
