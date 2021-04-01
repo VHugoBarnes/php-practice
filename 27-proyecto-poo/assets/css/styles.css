@@ -379,3 +379,20 @@ button {
     background: #222222;
     border-top: 4px solid #01B1EA;
 }
+
+/* CARRITO */
+.total-carrito {
+    margin-top: 20px;
+    display: block;
+    float: right;
+}
+
+#precio-total {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.button-pedido {
+    width: 250px;
+    text-align: center;
+}
