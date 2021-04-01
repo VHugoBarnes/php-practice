@@ -74,7 +74,19 @@ class productoController {
     }
 
     public function eliminar() {
-        var_dump("Eliminar");
-    }
+        Utils::isAdmin();
 
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $producto = new Producto();
+            $producto->setId($id);
+            $delete = $producto->delete();
+
+            $delete ? $_SESSION['delete'] = 'complete' : $_SESSION['delete'] = 'failed';
+        } else {
+            $_SESSION['delete'] = 'failed';
+        }
+
+        header("Location: ".base_url."producto/gestion");
+    }
 }
