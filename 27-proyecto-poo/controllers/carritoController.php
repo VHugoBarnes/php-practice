@@ -5,8 +5,11 @@ require_once 'models/Producto.php';
 class carritoController {
 
     public function index() {
-        echo "<pre> ", var_export($_SESSION['carrito']), " </pre>";
-        // echo "Controlador Carrito, Acción index";
+        // echo "<pre> ", var_export($_SESSION['carrito']), " </pre>";
+        
+        $carrito = $_SESSION['carrito'];
+
+        require_once 'views/carrito/index.php';
     }
 
     public function add() {
