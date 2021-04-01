@@ -8,8 +8,8 @@
         <label for="provincia">Provincia</label>
         <input type="text" name="provincia" id="" required>
 
-        <label for="ciudad">Ciudad</label>
-        <input type="text" name="ciudad" id="" required>
+        <label for="localidad">Localidad</label>
+        <input type="text" name="localidad" id="" required>
 
         <label for="direccion">Direccion</label>
         <input type="text" name="direccion" id="" required>
