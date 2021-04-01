@@ -25,7 +25,7 @@ class productoController {
 
     public function save() {
         Utils::isAdmin();
-        if( $_POST ) {
+        if ($_POST) {
             $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
             $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : false;
             $precio = isset($_POST['precio']) ? $_POST['precio'] : false;
@@ -33,7 +33,7 @@ class productoController {
             $categoria = isset($_POST['categoria']) ? $_POST['categoria'] : false;
             //$imagen = isset($_POST['imagen']) ? $_POST['imagen'] : false;
 
-            if( $nombre && $descripcion && $precio && $stock && $categoria ) {
+            if ($nombre && $descripcion && $precio && $stock && $categoria) {
                 $producto = new Producto();
                 $producto->setNombre($nombre);
                 $producto->setDescripcion($descripcion);
@@ -41,18 +41,31 @@ class productoController {
                 $producto->setStock($stock);
                 $producto->setCategoria_id($categoria);
 
+                // Subida de archivos
+                $file = $_FILES['imagen'];
+                $filename = $file['name'];
+                $mimetype = $file['type'];
+
+                if ($mimetype == 'image/jpg' || $mimetype == 'image/jpeg' || $mimetype == 'image/png' || $mimetype == 'image/gif') {
+                    if (!is_dir('uploads/images/')) {
+                        if (!mkdir('uploads/images/', 0777, true)) {
+                            die('Fallo al crear las carpetas');
+                        }
+                    }
+
+                    move_uploaded_file($file['tmp_name'], 'uploads/images/' . $filename);
+                    $producto->setImagen($filename);
+                }
+
                 $save = $producto->save();
                 $save ? $_SESSION['producto'] = 'complete' : $_SESSION['producto'] = 'failed';
             } else {
                 $_SESSION['producto'] = 'failed';
             }
-
         } else {
             $_SESSION['producto'] = 'failed';
         }
 
-        header("Location: ".base_url."producto/gestion");
-
+        header("Location: " . base_url . "producto/gestion");
     }
-
 }
