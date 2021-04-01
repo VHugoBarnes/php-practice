@@ -8,6 +8,9 @@ class pedidoController {
 
     public function add() {
 
+            echo "<pre> " , var_export($_POST) , " </pre>";
+            die();
+
     }
 
 }
