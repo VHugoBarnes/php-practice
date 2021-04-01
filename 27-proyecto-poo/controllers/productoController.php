@@ -42,22 +42,31 @@ class productoController {
                 $producto->setCategoria_id($categoria);
 
                 // Subida de archivos
-                $file = $_FILES['imagen'];
-                $filename = $file['name'];
-                $mimetype = $file['type'];
+                if (isset($_FILES['imagen'])) {
+                    $file = $_FILES['imagen'];
+                    $filename = $file['name'];
+                    $mimetype = $file['type'];
 
-                if ($mimetype == 'image/jpg' || $mimetype == 'image/jpeg' || $mimetype == 'image/png' || $mimetype == 'image/gif') {
-                    if (!is_dir('uploads/images/')) {
-                        if (!mkdir('uploads/images/', 0777, true)) {
-                            die('Fallo al crear las carpetas');
+                    if ($mimetype == 'image/jpg' || $mimetype == 'image/jpeg' || $mimetype == 'image/png' || $mimetype == 'image/gif') {
+                        if (!is_dir('uploads/images/')) {
+                            if (!mkdir('uploads/images/', 0777, true)) {
+                                die('Fallo al crear las carpetas');
+                            }
                         }
-                    }
 
-                    move_uploaded_file($file['tmp_name'], 'uploads/images/' . $filename);
-                    $producto->setImagen($filename);
+                        move_uploaded_file($file['tmp_name'], 'uploads/images/' . $filename);
+                        $producto->setImagen($filename);
+                    }
                 }
 
-                $save = $producto->save();
+                if(isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    $producto->setId($id);
+                    $save = $producto->edit();    
+                } else {
+                    $save = $producto->save();
+                }
+
                 $save ? $_SESSION['producto'] = 'complete' : $_SESSION['producto'] = 'failed';
             } else {
                 $_SESSION['producto'] = 'failed';
@@ -70,7 +79,20 @@ class productoController {
     }
 
     public function editar() {
-        var_dump("Editar");
+        Utils::isAdmin();
+
+        if (isset($_GET['id'])) {
+            $edit = true;
+
+            $id = $_GET['id'];
+            $producto = new Producto();
+            $producto->setId($id);
+            $pro = $producto->getOne();
+
+            require_once 'views/producto/crear.php';
+        } else {
+            header("Location: " . base_url . "producto/gestion");
+        }
     }
 
     public function eliminar() {
@@ -87,6 +109,6 @@ class productoController {
             $_SESSION['delete'] = 'failed';
         }
 
-        header("Location: ".base_url."producto/gestion");
+        header("Location: " . base_url . "producto/gestion");
     }
 }
