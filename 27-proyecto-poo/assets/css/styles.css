@@ -247,6 +247,19 @@ button,
     margin-bottom: 5px;
 }
 
+.button-gestion {
+    margin-bottom: 5px;
+}
+
+.button-red {
+    background: #e03f39;
+    border: 1px solid #b3332e;
+}
+
+.button-editar {
+    margin-top: 5px;
+}
+
 label,
 input[type="button"],
 input[type="submit"],
