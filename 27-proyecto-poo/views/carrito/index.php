@@ -16,9 +16,17 @@
         </tr>
     <?php endforeach; ?>
 </table>
+<br>
+<br>
 
-<div class="total-carrito">
-    <?php $stats = Utils::statsCarrito(); ?>
-    <h3 id="precio-total">Precio total: $<?= $stats['total'] ?></h3>
-    <a href="<?=base_url?>pedido/hacer" class="button button-pedido">Continuar con el pedido</a>
+<div class="acciones-carrito">
+    <div class="delete-carrito">
+        <a href="<?= base_url ?>carrito/delete_all" class="button button-pedido button-red">Vaciar carrito</a>
+    </div>
+
+    <div class="total-carrito">
+        <?php $stats = Utils::statsCarrito(); ?>
+        <h3 id="precio-total">Precio total: $<?= $stats['total'] ?></h3>
+        <a href="<?= base_url ?>pedido/hacer" class="button button-pedido">Continuar con el pedido</a>
+    </div>
 </div>

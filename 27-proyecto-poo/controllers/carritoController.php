@@ -49,6 +49,7 @@ class carritoController {
     }
 
     public function remove() {
+        
     }
 
     public function delete_all() {

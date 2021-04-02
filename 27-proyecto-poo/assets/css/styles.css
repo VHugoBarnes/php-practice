@@ -381,8 +381,19 @@ button {
 }
 
 /* CARRITO */
+.acciones-carrito {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-carrito {
+    width: 300px;
+    display: block;
+    float: left;
+    margin-top: 31px;
+}
+
 .total-carrito {
-    margin-top: 20px;
     display: block;
     float: right;
 }
