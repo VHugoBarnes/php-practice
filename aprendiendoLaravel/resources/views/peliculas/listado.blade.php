@@ -15,7 +15,13 @@
     <title>Listado de películas</title>
 </head>
 <body>
-    <h1><?=$titulo?></h1>
-    <h2><?=$listado[2]?></h2>
+    <h1>{{ $titulo }}</h1>
+    <h2>{{ $listado[0] }}</h2>
+    <h2>{{ $listado[1] }}</h2>
+    <h2>{{ $listado[2] }}</h2>
+    <h2>{{ $listado[3] }}</h2>
+    <h3>{{ date('Y') }}</h3>
+    <!-- HTML Comentario -->
+    {{-- Blade Comentario --}}
 </body>
 </html>
