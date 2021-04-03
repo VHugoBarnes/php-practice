@@ -26,4 +26,9 @@ Route::get('/peliculas/detalle', [
     'as' => 'detalle.pelicula'
 ]);
 
+Route::get('/peliculas/redirigir', [
+    'uses' => 'PeliculaController@redirigir',
+    'as' => 'redirigir.pelicula'
+]);
+
 Route::resource('/usuario', 'UsuarioController');

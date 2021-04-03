@@ -22,4 +22,11 @@ class PeliculaController extends Controller
         return view('pelicula.detalle');
     }
 
+    public function redirigir()
+    {
+        // return \redirect()->action('PeliculaController@detalle');
+        // return redirect('/');
+        return redirect()->route('detalle.pelicula');
+    }
+
 }
