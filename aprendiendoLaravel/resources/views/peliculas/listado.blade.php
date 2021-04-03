@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    @include('includes/header')
     {{-- Interpolación de variables --}}
     <h1>{{ $titulo }}</h1>
     <h2>{{ $listado[0] }}</h2>
@@ -42,13 +43,13 @@
     @endif
 
     {{-- Bucles --}}
-    @for ($i=0; $i<=20; $i++)
+    @for ($i=0; $i<=10; $i++)
         <p>{{ $i }}</p>
     @endfor
 
     <hr>
     <?php $contador = 1 ?>
-    @while ($contador < 50)
+    @while ($contador < 20)
         @if ($contador % 2 == 0)
             <p>{{ $contador }}</p>
         @endif
@@ -59,6 +60,8 @@
     @foreach ($listado as $index => $item)
         <p>{{ $item }}</p>
     @endforeach
+
+    @include('includes/footer')
 
 </body>
 </html>
