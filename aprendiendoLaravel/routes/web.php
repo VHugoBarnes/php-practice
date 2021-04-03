@@ -15,4 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/peliculas/{pagina?}', 'PeliculaController@index');
+Route::get('/peliculas/{pagina?}', 'PeliculaController@index')
+    ->where(array('pagina' => '[0-9]+'));
+
+Route::get('/peliculas/detalle', [
+    'uses' => 'PeliculaController@detalle',
+    'as' => 'detalle.pelicula'
+]);
+
+Route::resource('/usuario', 'UsuarioController');

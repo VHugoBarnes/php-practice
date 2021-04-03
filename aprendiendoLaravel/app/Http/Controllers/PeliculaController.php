@@ -17,4 +17,10 @@ class PeliculaController extends Controller
         ]);
     }
 
+    public function detalle()
+    {
+        echo "<h1>Detalle de la película</h1>";
+        die();
+    }
+
 }
