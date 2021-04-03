@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/mostrar-fecha', function () {
+    date_default_timezone_set("America/Matamoros");
+    $fecha = date('d-m-y');
+    return view('mostrar-fecha', array(
+        'fecha' => $fecha
+    ));
+});
