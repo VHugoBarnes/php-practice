@@ -21,7 +21,8 @@ Route::get('/peliculas/{pagina?}', [
     ])
     ->where(array('pagina' => '[0-9]+'));
 
-Route::get('/peliculas/detalle', [
+Route::get('/peliculas/detalle/{year?}', [
+    'middleware' => 'testyear',
     'uses' => 'PeliculaController@detalle',
     'as' => 'detalle.pelicula'
 ]);
