@@ -23,8 +23,12 @@ Route::get('/mostrar-fecha', function () {
     ));
 });
 
-Route::get('/pelicula/{titulo?}', function ($titulo='No hay una película seleccionada') {
+Route::get('/pelicula/{titulo}/{year?}', function ($titulo, $year=2021) {
     return view('pelicula', array(
-        'titulo' => $titulo
+        'titulo' => $titulo,
+        'year' => $year
     ));
-});
+})->where(array(
+    'titulo' => '[a-zA-Z]+',
+    'year' => '[0-9]+'
+));

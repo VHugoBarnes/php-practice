@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Película: <?=$titulo?></h1>
+    <p>Del año <?=$year?></p>
 </body>
 </html>
