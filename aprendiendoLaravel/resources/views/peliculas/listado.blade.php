@@ -41,5 +41,24 @@
         <p>El título no existe</p>
     @endif
 
+    {{-- Bucles --}}
+    @for ($i=0; $i<=20; $i++)
+        <p>{{ $i }}</p>
+    @endfor
+
+    <hr>
+    <?php $contador = 1 ?>
+    @while ($contador < 50)
+        @if ($contador % 2 == 0)
+            <p>{{ $contador }}</p>
+        @endif
+        <?php $contador++; ?>
+    @endwhile
+
+    <hr>
+    @foreach ($listado as $index => $item)
+        <p>{{ $item }}</p>
+    @endforeach
+
 </body>
 </html>
