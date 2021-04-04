@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -46,6 +48,13 @@ Route::get('/frutas', [
     'uses' => 'FrutaController@index',
     'as' => 'index.frutas'
 ]);
+
+Route::prefix('/frutas')->group(function () {
+    Route::get('/detail/{id?}', [
+        'uses' => 'FrutaController@detail',
+        'as' => 'detail.fruta'
+    ])->where(array('id' => '[0-9]+'));
+});
 
 
 Route::resource('/usuario', 'UsuarioController');

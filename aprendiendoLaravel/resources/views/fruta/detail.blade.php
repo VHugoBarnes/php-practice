@@ -10,14 +10,10 @@
             color: #383838;
         }
     </style>
-    <title>Listado de frutas</title>
+    <title>Detalle de la fruta: {{ $fruta->nombre }}</title>
 </head>
 <body>
-    <h1>Frutas disponibles</h1>
-    <ul>
-        @foreach ($frutas as $fruta)
-            <li><a href="{{ action('FrutaController@detail', ['id' => $fruta->id]) }}">{{ $fruta->nombre }}</a></li>
-        @endforeach
-    </ul>
+    <h1>{{ $fruta->nombre }}</h1>
+    <p>Descripción: {{ $fruta->descripcion }}</p>
 </body>
 </html>
