@@ -32,4 +32,14 @@ Route::get('/peliculas/redirigir', [
     'as' => 'redirigir.pelicula'
 ]);
 
+Route::get('/peliculas/formulario', [
+    'uses' => 'PeliculaController@formulario',
+    'as' => 'formulario.pelicula'
+]);
+
+Route::post('/peliculas/recibir', [
+    'uses' => 'PeliculaController@recibir',
+    'as' => 'recibir.peliculas'
+]);
+
 Route::resource('/usuario', 'UsuarioController');
