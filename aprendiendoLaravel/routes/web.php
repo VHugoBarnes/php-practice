@@ -42,4 +42,10 @@ Route::post('/peliculas/recibir', [
     'as' => 'recibir.peliculas'
 ]);
 
+Route::get('/frutas', [
+    'uses' => 'FrutaController@index',
+    'as' => 'index.frutas'
+]);
+
+
 Route::resource('/usuario', 'UsuarioController');
