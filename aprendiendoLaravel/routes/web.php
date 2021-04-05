@@ -69,6 +69,16 @@ Route::prefix('/frutas')->group(function () {
         'uses' => 'FrutaController@delete',
         'as' => 'delete.fruta'
     ])->where(array('id' => '[0-9]+'));
+
+    Route::get('/editar/{id}', [
+        'uses' => 'FrutaController@edit',
+        'as' => 'edit.fruta'
+    ])->where(array('id' => '[0-9]+'));
+
+    Route::post('/update', [
+        'uses' => 'FrutaController@update',
+        'as' => 'update.fruta'
+    ])->where(array('id' => '[0-9]+'));
 });
 
 
