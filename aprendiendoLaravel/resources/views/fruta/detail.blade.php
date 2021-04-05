@@ -15,5 +15,8 @@
 <body>
     <h1>{{ $fruta->nombre }}</h1>
     <p>Descripción: {{ $fruta->descripcion }}</p>
+
+    <h3><a href="{{ action('FrutaController@delete', ['id' => $fruta->id]) }}">Eliminar</a></h3>
+    <h3><a href="">Actualizar</a></h3>
 </body>
 </html>

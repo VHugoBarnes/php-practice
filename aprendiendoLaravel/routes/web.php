@@ -64,6 +64,11 @@ Route::prefix('/frutas')->group(function () {
         'uses' => 'FrutaController@save',
         'as' => 'save.fruta'
     ]);
+
+    Route::get('/delete/{id}', [
+        'uses' => 'FrutaController@delete',
+        'as' => 'delete.fruta'
+    ])->where(array('id' => '[0-9]+'));
 });
 
 
