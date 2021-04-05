@@ -54,6 +54,16 @@ Route::prefix('/frutas')->group(function () {
         'uses' => 'FrutaController@detail',
         'as' => 'detail.fruta'
     ])->where(array('id' => '[0-9]+'));
+
+    Route::get('/crear', [
+        'uses' => 'FrutaController@create',
+        'as' => 'crear.fruta'
+    ]);
+
+    Route::post('/save', [
+        'uses' => 'FrutaController@save',
+        'as' => 'save.fruta'
+    ]);
 });
 
 

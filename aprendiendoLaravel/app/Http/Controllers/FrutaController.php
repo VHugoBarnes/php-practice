@@ -25,4 +25,22 @@ class FrutaController extends Controller
             'fruta' => $fruta
         ]);
     }
+
+    public function create()
+    {
+        return view('fruta.crear');
+    }
+
+    public function save(Request $request)
+    {
+        // Guardar en la base de datos
+        $fruta = DB::table('frutas')->insert(array(
+            'nombre' => $request->input('nombre'),
+            'descripcion' => $request->input('descripcion'),
+            'precio' => $request->input('precio'),
+            'fecha' => date('Y-m-d')
+        ));
+
+        return \redirect()->action('FrutaController@index');
+    }
 }
