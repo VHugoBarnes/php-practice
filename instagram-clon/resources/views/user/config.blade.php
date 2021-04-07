@@ -84,16 +84,11 @@
                             </div>
 
                             <div class="form-group row">
-                                @if (Auth::user()->image)
-                                    <img src="{{ route('user.avatar', ['filename' => Auth::user()->image]) }}" alt="Avatar" class="avatar">
-                                @endif
-                            </div>
-
-                            <div class="form-group row">
                                 <label for="image_path"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
 
                                 <div class="col-md-6">
+                                    @include('includes.avatar')
                                     <input id="image_path" type="file"
                                         class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
 

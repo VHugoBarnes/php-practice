@@ -1,5 +1,16 @@
-.avatar {
-    display: block;
-    margin-left: 25%;
+form .avatar {
+    margin-bottom: 15px;
     width: 55px;
+}
+
+.navbar .container-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.navbar .container-avatar img {
+    width: 100%;
+    height: 100%;
 }
