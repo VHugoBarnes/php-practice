@@ -50,10 +50,10 @@
                             </li>
                         @else
                             <li>
-                                <a href="" class="nav-link">Inicio</a>
+                                <a href="{{ route('home') }}" class="nav-link">Inicio</a>
                             </li>
                             <li>
-                                <a href="" class="nav-link">Subir imagen</a>
+                                <a href="{{ route('image.upload') }}" class="nav-link">Subir imagen</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <li>
