@@ -29,3 +29,4 @@ Route::post('/user/update', 'UserController@update')->name('user.update');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');
 
 Route::get('/upload', 'ImageController@create')->name('image.upload');
+Route::post('/save-image', 'ImageController@save')->name('image.save');
