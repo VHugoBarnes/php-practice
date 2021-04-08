@@ -86,3 +86,14 @@ form .avatar {
 .count-likes {
     color: #777;
 }
+
+.avatar-profile {
+    width: 250px;
+    height: 250px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.nickname-profile {
+    color: #777;
+}

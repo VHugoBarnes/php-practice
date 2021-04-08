@@ -3,8 +3,7 @@
     <div class="card-header">
         @if ($image->user->image)
             <div class="container-avatar">
-                <img src="{{ route('user.avatar', ['filename' => $image->user->image]) }}" alt="Avatar"
-                    class="avatar">
+                <img src="{{ route('user.avatar', ['filename' => $image->user->image]) }}" alt="Avatar" class="avatar">
             </div>
         @endif
         <a href="{{ route('user.profile', ['id' => $image->user->id]) }}">
