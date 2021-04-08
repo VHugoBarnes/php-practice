@@ -34,12 +34,17 @@
                         <div class="comments">
                             <h4 class="p-3">Comentarios ({{ count($image->comments) }})</h4 class="p-3">
                             <hr>
-                            <form action="" method="post">
+                            <form action="{{ route('comment.save') }}" method="post">
                                 @csrf
                                 <input type="hidden" name="image_id" value="{{ $image->id }}">
 
                                 <p>
                                     <textarea name="content" id="content" cols="30" rows="10" class="form-control" required></textarea>
+                                    @if ($errors->has('content'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('content') }}</strong>
+                                        </span>
+                                    @endif
                                 </p>
                                 <button type="submit" class="btn btn-success">Enviar</button>
                             </form>
