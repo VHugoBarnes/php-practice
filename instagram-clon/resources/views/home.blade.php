@@ -29,7 +29,20 @@
                                 <strong>{{ '@' . $image->user->nick }}</strong><span>{{ $image->description }}</span>
                             </div>
                             <div class="likes">
-                                <img src="{{ asset('img/hearts-gray.png') }}" alt="like">
+                                {{-- Comprobar si el usuario le dio like a la imagen --}}
+                                <?php $user_like = false; ?>
+                                @foreach ($image->likes as $like)
+                                    @if ($like->user->id == \Auth::user()->id)
+                                        <?php $user_like = true; ?>
+                                    @endif
+                                @endforeach
+
+                                @if ($user_like)
+                                    <img src="{{ asset('img/heart-red.png') }}" alt="like" class="btn-dislike">
+                                @else
+                                    <img src="{{ asset('img/heart-gray.png') }}" alt="like" class="btn-like">
+                                @endif
+                                <span class="count-likes">{{ count($image->likes) }}</span>
                             </div>
                             <div class="comments">
                                 <a href="" class="btn btn-sm btn-warning ml-3 mr-3 mb-3">

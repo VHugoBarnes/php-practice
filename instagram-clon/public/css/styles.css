@@ -82,3 +82,7 @@ form .avatar {
 .pub_image_detail .card-body .comments {
     padding: 20px;
 }
+
+.count-likes {
+    color: #777;
+}
