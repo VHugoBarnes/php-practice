@@ -64,6 +64,13 @@ form .avatar {
     margin-right: 4px;
 }
 
-.pagination {
-    margin: 0 auto !important;
+.likes {
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    float: left;
+}
+
+.likes img {
+    width: 20px;
 }

@@ -23,11 +23,16 @@
                             <div class="image-container">
                                 <img src="{{ route('image.file', ['filename' => $image->image_path]) }}" alt="image">
                             </div>
-                            <div class="likes">
-
-                            </div>
                             <div class="description">
                                 <strong>{{ '@' . $image->user->nick }}</strong><span>{{ $image->description }}</span>
+                            </div>
+                            <div class="likes">
+                                <img src="{{ asset('img/hearts-gray.png') }}" alt="like">
+                            </div>
+                            <div class="comments">
+                                <a href="" class="btn btn-sm btn-warning ml-3 mr-3 mb-3">
+                                    Comentarios
+                                </a>
                             </div>
                         </div>
                     </div>
