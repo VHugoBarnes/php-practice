@@ -39,7 +39,7 @@
                                 <input type="hidden" name="image_id" value="{{ $image->id }}">
 
                                 <p>
-                                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" required></textarea>
+                                    <textarea name="content" id="content" cols="30" rows="10" class="form-control {{ $errors->has('content') ? 'is-invalid' : '' }}" required></textarea>
                                     @if ($errors->has('content'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('content') }}</strong>
