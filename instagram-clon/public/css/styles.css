@@ -63,3 +63,7 @@ form .avatar {
 .card-body .description strong {
     margin-right: 4px;
 }
+
+.pagination {
+    margin: 0 auto !important;
+}
