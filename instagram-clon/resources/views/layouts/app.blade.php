@@ -56,6 +56,9 @@
                             <li>
                                 <a href="{{ route('image.upload') }}" class="nav-link">Subir imagen</a>
                             </li>
+                            <li>
+                                <a href="{{ route('likes') }}" class="nav-link">Mis likes</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <li>
                                     &nbsp;
