@@ -14,7 +14,7 @@
                                     class="avatar">
                             </div>
                         @endif
-                        <div class="data-user"><span class="nickname">{{ $image->user->nick }}</span></div>
+                        <div class="data-user"><a href="{{ route('user.profile', ['id' => $image->user->id]) }}" class="nickname">{{ $image->user->nick }}</a></div>
                     </div>
 
                     <div class="card-body">
