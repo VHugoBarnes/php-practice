@@ -34,12 +34,15 @@
                         <div class="comments">
                             <h4 class="p-3">Comentarios ({{ count($image->comments) }})</h4 class="p-3">
                             <hr>
+                            <h5>Agregar comentario</h5>
                             <form action="{{ route('comment.save') }}" method="post">
                                 @csrf
                                 <input type="hidden" name="image_id" value="{{ $image->id }}">
 
                                 <p>
-                                    <textarea name="content" id="content" cols="30" rows="10" class="form-control {{ $errors->has('content') ? 'is-invalid' : '' }}" required></textarea>
+                                    <textarea name="content" id="content" cols="30" rows="10"
+                                        class="form-control {{ $errors->has('content') ? 'is-invalid' : '' }}"
+                                        required></textarea>
                                     @if ($errors->has('content'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('content') }}</strong>
@@ -48,6 +51,14 @@
                                 </p>
                                 <button type="submit" class="btn btn-success">Enviar</button>
                             </form>
+                            <hr>
+                            @foreach ($image->comments as $comment)
+                                <div class="comment mt-2 ml-2">
+                                    <strong>{{ '@' . $image->user->nick }}</strong><span> {{ $comment->content }}</span>
+                                    <p class="pt-1 date">{{ \FormatTime::LongTimeFilter($image->created_at) }}</p>
+                                </div>
+                                <hr>
+                            @endforeach
                         </div>
                     </div>
                 </div>
