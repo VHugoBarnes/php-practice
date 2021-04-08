@@ -32,6 +32,9 @@
                                 Comentarios ({{ count($image->comments) }})
                             </a>
                         </div>
+                        <div>
+                            <span class="p-3 date">{{ \FormatTime::LongTimeFilter($image->created_at) }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
