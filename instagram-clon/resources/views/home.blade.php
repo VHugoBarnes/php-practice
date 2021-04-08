@@ -16,7 +16,9 @@
                                         alt="Avatar" class="avatar">
                                 </div>
                             @endif
-                            <div class="data-user"><span class="nickname">{{ $image->user->nick }}</span></div>
+                            <a href="{{ route('image.detail', ['id'=>$image->id]) }}">
+                                <div class="data-user"><span class="nickname">{{ $image->user->nick }}</span></div>
+                            </a>
                         </div>
 
                         <div class="card-body">
@@ -31,7 +33,7 @@
                             </div>
                             <div class="comments">
                                 <a href="" class="btn btn-sm btn-warning ml-3 mr-3 mb-3">
-                                    Comentarios
+                                    Comentarios ({{ count($image->comments) }})
                                 </a>
                             </div>
                         </div>

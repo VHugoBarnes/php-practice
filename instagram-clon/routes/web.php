@@ -31,3 +31,4 @@ Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.ava
 Route::get('/upload', 'ImageController@create')->name('image.upload');
 Route::post('/save/image', 'ImageController@save')->name('image.save');
 Route::get('/image/file/{filename}', 'ImageController@getImage')->name('image.file');
+Route::get('/image/{id}', 'ImageController@detail')->name('image.detail');
