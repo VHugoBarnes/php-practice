@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 @include('includes.message')
-                <div class="card pub_image">
+                <div class="card pub_image pub_image_detail">
 
                     <div class="card-header">
                         @if ($image->user->image)
@@ -27,13 +27,22 @@
                         <div class="likes">
                             <img src="{{ asset('img/hearts-gray.png') }}" alt="like">
                         </div>
-                        <div class="comments">
-                            <a href="" class="btn btn-sm btn-warning ml-3 mr-3 mb-3">
-                                Comentarios ({{ count($image->comments) }})
-                            </a>
-                        </div>
                         <div>
                             <span class="p-3 date">{{ \FormatTime::LongTimeFilter($image->created_at) }}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="comments">
+                            <h4 class="p-3">Comentarios ({{ count($image->comments) }})</h4 class="p-3">
+                            <hr>
+                            <form action="" method="post">
+                                @csrf
+                                <input type="hidden" name="image_id" value="{{ $image->id }}">
+
+                                <p>
+                                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" required></textarea>
+                                </p>
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
