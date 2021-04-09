@@ -71,7 +71,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="" class="btn btn-sm btn-warning">Actualizar</a>
+                                <a href="{{ route('image.edit', ['id'=>$image->id]) }}" class="btn btn-sm btn-warning">Actualizar</a>
                             </div>
                         @endif
                         <div class="clearfix"></div>

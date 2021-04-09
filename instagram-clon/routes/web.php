@@ -34,6 +34,7 @@ Route::post('/save/image', 'ImageController@save')->name('image.save');
 Route::get('/image/file/{filename}', 'ImageController@getImage')->name('image.file');
 Route::get('/image/{id}', 'ImageController@detail')->name('image.detail');
 Route::get('/image/delete/{id}', 'ImageController@delete')->name('image.delete');
+Route::get('/image/edit/{id}', 'ImageController@edit')->name('image.edit');
 
 Route::post('/comment/save', 'CommentController@save')->name('comment.save');
 Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.delete');
