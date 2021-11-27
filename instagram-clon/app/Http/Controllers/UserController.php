@@ -11,15 +11,27 @@ use App\User;
 
 class UserController extends Controller {
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
-    public function config() {
+    public function index()
+    {
+        $users = User::orderBy('id', 'desc')->paginate(5);
+
+        return view('user.index', [
+            'users' => $users
+        ]);
+    }
+
+    public function config()
+    {
         return view('user.config');
     }
 
-    public function update(Request $request) {
+    public function update(Request $request)
+    {
         // Conseguir el usuario identificado
         $user    = \Auth::user();
         $id      = $user->id;
@@ -62,7 +74,8 @@ class UserController extends Controller {
                          ->with(['message'=>'Usuario actualizado correctamente']);
     }
 
-    public function getImage($filename) {
+    public function getImage($filename)
+    {
         $file = Storage::disk('users')->get($filename);
         return new Response($file, 200);
     }
